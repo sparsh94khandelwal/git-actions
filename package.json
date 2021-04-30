@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/skupreme/skupreme-db-utilities#readme",
   "dependencies": {
-    "mongoose": "^5.12.5"
+    "mongoose": "^5.12.5",
+    "pre-commit": "^1.2.2"
+  },
+  "devDependencies": {
+    "serverless-offline": "^6.3.1"
   }
 }
