@@ -37,4 +37,4 @@ functions:
   actions:
     handler: src/connection.sampleAction
     memorySize: 128
-    timeout: ${file(env.yml):${self:custom.myStage}.AWS_LAMBDA_TIMEOUT}
+    timeout: ${file(env.yml):${self:custom.stage}.AWS_LAMBDA_TIMEOUT}
