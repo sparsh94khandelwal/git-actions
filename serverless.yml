@@ -5,8 +5,6 @@ custom:
   stage: ${opt:stage, 'dev'}
 
   defaultStage: dev
-  profiles:
-    dev: skupreme
 
   region:
     dev: us-east-2
