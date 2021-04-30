@@ -23,9 +23,6 @@ provider:
   region: ${self:custom.region.${self:provider.stage}}
   environment: ${file(env.yml):${self:custom.stage}}
 
-  deploymentBucket:
-    name: ${self:custom.deploymentbucket.${self:provider.stage}}
-
 functions:
   actions:
     handler: src/connection.sampleAction
