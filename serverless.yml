@@ -33,10 +33,8 @@ provider:
   deploymentBucket:
     name: ${self:custom.deploymentbucket.${self:provider.stage}}
 
-
-functions: 
-  actions: 
+functions:
+  actions:
     handler: src/connection.sampleAction
-      memorySize: 128
-      timeout: ${file(env.yml):${self:custom.myStage}.AWS_LAMBDA_TIMEOUT}
-
+    memorySize: 128
+    timeout: ${file(env.yml):${self:custom.myStage}.AWS_LAMBDA_TIMEOUT}
