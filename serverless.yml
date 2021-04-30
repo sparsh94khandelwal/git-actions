@@ -1,0 +1,42 @@
+service: git-actions
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-include-dependencies
+  - serverless-deployment-bucket
+
+custom:
+  service: ${opt:service, 'git-actions'}
+  stage: ${opt:stage, 'dev'}
+
+  defaultStage: dev
+  profiles:
+    dev: skupreme
+
+  region:
+    dev: us-east-2
+
+  deploymentbucket:
+    dev: skupreme-app-serverless-dev-us-east-2
+
+  accountId:
+    dev: 502379106765
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, self:custom.defaultStage}
+  profile: ${self:custom.profiles.${self:provider.stage}}
+  region: ${self:custom.region.${self:provider.stage}}
+  environment: ${file(env.yml):${self:custom.stage}}
+
+  deploymentBucket:
+    name: ${self:custom.deploymentbucket.${self:provider.stage}}
+
+
+functions: 
+  actions: 
+    handler: src/connection.sampleAction
+      memorySize: 128
+      timeout: ${file(env.yml):${self:custom.myStage}.AWS_LAMBDA_TIMEOUT}
+
