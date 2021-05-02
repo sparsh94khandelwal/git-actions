@@ -18,7 +18,7 @@
   "homepage": "https://github.com/skupreme/skupreme-db-utilities#readme",
   "dependencies": {
     "mongoose": "^5.12.5",
-    "db-utils": "git+https://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@github.com/skupreme/skupreme-db-utilities.git#develop"
+    "db-utils": "git+https://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@github.com/skupreme/skupreme-db-utilities.git#develop"
   },
   "devDependencies": {
     "serverless-offline": "^6.3.1"
