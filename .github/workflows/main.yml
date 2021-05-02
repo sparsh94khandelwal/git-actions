@@ -27,6 +27,7 @@ jobs:
       - name: serverless deploy
         working-directory: ./nested-repo
         run: |
+          npm i serverless@1.57.0 -g
           serverless config credentials --provider aws --key ${{ secrets.AWS_ACCESS_KEY }} --secret ${{ secrets.AWS_SECRET_KEY }} -o 
           sls deploy -r us-east-2
         env:
