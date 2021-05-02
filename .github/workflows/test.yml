@@ -1,12 +1,9 @@
-name: Deploy Lambda
+name: Install dependencies
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
-      - main
+      - test
 
 jobs:
   deploy:
@@ -14,23 +11,21 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [14.x]
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install dependencies
-        run: cd nested-repo
-        run: npm i
+      - run: cd src
+      - run: npm i
       - name: serverless deploy
-        working-directory: ./nested-repo
         uses: serverless/github-action@master
         with:
           args: deploy
         env:
-          # SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
+          SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
           # or if using AWS credentials directly
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_KEY }}
