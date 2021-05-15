@@ -15,12 +15,11 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: "@sparsh94khandelwal"
-      - uses: fregante/setup-git-user@v1
+      - name: "Automated Version Bump"
+        uses: "phips28/gh-action-bump-version@master"
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: |
-          npm version patch -m "Upgrade to %s"
-          git add *;
-          git commit -m "Version updated"
-          git push  
           npm install
           npm publish
         env:
