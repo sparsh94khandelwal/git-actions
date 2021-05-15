@@ -19,12 +19,10 @@ jobs:
         working-directory: ./nested-repo
         run: |
           npm version patch -m "Upgrade to %s"
-          git config --global user.email "1994sparsh@gmail.com"
-          git config --global user.name "sparsh94khandelwal"
           git add *;
           git commit -m "Version updated"
           git push  
           npm install
           npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
