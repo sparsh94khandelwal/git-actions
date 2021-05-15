@@ -18,6 +18,7 @@ jobs:
       - uses: fregante/setup-git-user@v1
       - run: |
           npm version patch -m "Upgrade to %s"
+          git push
           git add *;
           git commit -m "Version updated"
           git push  
