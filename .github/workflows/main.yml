@@ -18,7 +18,6 @@ jobs:
       - name: version bump
         working-directory: ./nested-repo
         run: |
-          npm version patch
           npm install
           npm publish
         env:
