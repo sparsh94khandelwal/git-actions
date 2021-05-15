@@ -1,5 +1,5 @@
 {
-  "name": "@sparsh/git-actions",
+  "name": "@sparsh94khandelwal/git-actions",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,16 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sparsh/git-actions.git"
+    "url": "git+https://github.com/sparsh94khandelwal/git-actions.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@sparsh"
+    "registry": "https://npm.pkg.github.com/@sparsh94khandelwal"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sparsh/git-actions/issues"
+    "url": "https://github.com/sparsh94khandelwal/git-actions/issues"
   },
-  "homepage": "https://github.com/sparsh/git-actions#readme",
+  "homepage": "https://github.com/sparsh94khandelwal/git-actions#readme",
   "dependencies": {}
 }
