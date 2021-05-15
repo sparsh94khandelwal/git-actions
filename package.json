@@ -1,0 +1,23 @@
+{
+  "name": "@sparsh94khandelwal/git-actions",
+  "version": "1.0.8",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sparsh94khandelwal/git-actions.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@sparsh94khandelwal"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sparsh94khandelwal/git-actions/issues"
+  },
+  "homepage": "https://github.com/sparsh94khandelwal/git-actions#readme",
+  "dependencies": {}
+}
