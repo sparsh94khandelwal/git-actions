@@ -19,9 +19,9 @@ jobs:
         working-directory: ./nested-repo
         run: |
           npm version patch
+          git push
+          git push --tags          
           npm install
           npm publish
-          git push
-          git push --tags
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
