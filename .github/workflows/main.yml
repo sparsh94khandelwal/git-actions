@@ -15,7 +15,9 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: "@sparsh"
-      - run: npm version patch
+      - name: version bump
+        working-directory: ./nested-repo
+        run: npm version patch
       - run: npm install
       - run: npm publish
         env:
