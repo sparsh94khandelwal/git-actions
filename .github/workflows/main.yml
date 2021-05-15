@@ -17,10 +17,6 @@ jobs:
           scope: "@sparsh94khandelwal"
       - name: "Automated Version Bump"
         uses: "phips28/gh-action-bump-version@master"
-        with:
-          default: major
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: |
           npm install
           npm publish
