@@ -19,6 +19,7 @@ jobs:
         working-directory: ./nested-repo
         run: |
           npm version patch -m "Upgrade to %s"
+          git init
           git config user.email "1994sparsh@gmail.com"
           git config user.name "sparsh94khandelwal"
           git add *;
