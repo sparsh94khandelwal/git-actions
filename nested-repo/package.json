@@ -1,5 +1,5 @@
 {
-  "name": "skupreme-db-utilities",
+  "name": "@sparsh/git-actions",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,19 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skupreme/skupreme-db-utilities.git"
+    "url": "git+https://github.com/sparsh/git-actions.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@sparsh"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/skupreme/skupreme-db-utilities/issues"
+    "url": "https://github.com/sparsh/git-actions/issues"
   },
-  "homepage": "https://github.com/skupreme/skupreme-db-utilities#readme",
-  "dependencies": {
-    "mongoose": "^5.12.5",
-    "@skupreme/skupreme-db-utilities": "1.0.0"
-  },
-  "devDependencies": {
-    "serverless-offline": "^6.3.1"
-  }
+  "homepage": "https://github.com/sparsh/git-actions#readme",
+  "dependencies": {}
 }
