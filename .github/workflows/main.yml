@@ -17,8 +17,9 @@ jobs:
           scope: "@sparsh"
       - name: version bump
         working-directory: ./nested-repo
-        run: npm version patch
-      - run: npm install
-      - run: npm publish
+        run: |
+          npm version patch
+          npm install
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
