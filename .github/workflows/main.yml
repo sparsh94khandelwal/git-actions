@@ -18,9 +18,8 @@ jobs:
       - name: version bump
         working-directory: ./nested-repo
         run: |
-          npm version patch
-          git push
-          git push --tags          
+          npm version patch -m "Upgrade to %s"
+          git push origin main && git push --tags       
           npm install
           npm publish
         env:
