@@ -15,9 +15,8 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: "@sparsh94khandelwal"
-      - name: version bump
-        working-directory: ./nested-repo
-        run: |
+      - uses: fregante/setup-git-user@v1
+      - run: |
           npm version patch -m "Upgrade to %s"
           git init
           git config user.email "1994sparsh@gmail.com"
