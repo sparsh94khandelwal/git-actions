@@ -15,10 +15,11 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: "@sparsh94khandelwal"
+      - name: "Automated Version Bump"
+        uses: "phips28/gh-action-bump-version@master"
+        with:
+          tag-prefix: ""
       - run: |
-          git config --global user.email "1994sparsh@gmail.com"
-          git config --global user.name "sparsh94khandelwal"
-          npm version patch
           npm i
           npm publish
         env:
