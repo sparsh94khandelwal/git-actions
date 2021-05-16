@@ -19,9 +19,6 @@ jobs:
           git config --global user.email "1994sparsh@gmail.com"
           git config --global user.name "sparsh94khandelwal"
           npm version patch
-          git add *;
-          git commit -m "Version upgrade"
-          git push
           npm i
           npm publish
         env:
