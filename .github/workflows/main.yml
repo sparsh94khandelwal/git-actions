@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-          scope: "@sparsh94khandelwal"
+          scope: "@sparsh"
       - run: |
           git config --global user.email "1994sparsh@gmail.com"
           git config --global user.name "sparsh94khandelwal"
