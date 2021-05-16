@@ -15,12 +15,14 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: "@sparsh94khandelwal"
-      - name: "Automated Version Bump"
-        uses: "phips28/gh-action-bump-version@master"
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: |
-          npm install
-          npm publish
+          git config --global user.email "1994sparsh@gmail.com"
+          git config --global user.name "sparsh94khandelwal"
+          npm version patch
+          git push
+          git add *;
+          git commit -m "Version upgrade"
+          git push
+          npm i
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
