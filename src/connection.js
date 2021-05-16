@@ -1,5 +1,5 @@
 const sampleAction = (event) => {
-    console.log('ping from sampleAction lambda qa', event.headers);
+    console.log('ping from sampleAction lambda', event.headers);
 };
 
 module.exports = { sampleAction };
