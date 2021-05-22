@@ -10,13 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: https://npm.pkg.github.com/
-          scope: "@sparsh94khandelwal"
       - id: dotenv
-        uses: ./.github/actions/dotenv-action
+        uses: ./../.github/actions/dotenv-action
       - run: |
           echo ${{ steps.dotenv.outputs.AWS_LAMBDA_TIMEOUT }}
         env:
