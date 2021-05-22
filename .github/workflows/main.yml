@@ -17,8 +17,7 @@ jobs:
           scope: "@sparsh94khandelwal"
       - id: dotenv
         uses: ./.github/actions/dotenv-action
-        path: ./../env.yml
       - run: |
-          echo ${{ steps.dotenv.outputs }}
+          echo ${{ steps.dotenv.outputs.AWS_LAMBDA_TIMEOUT }}
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
