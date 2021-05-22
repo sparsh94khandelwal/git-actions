@@ -15,8 +15,8 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: "@sparsh94khandelwal"
-      - id: dotenv
-        uses: actions/dotenv-action
+        id: dotenv
+        uses: ./.github/actions/dotenv-action
       - run: |
           echo ${{ steps.dotenv.outputs.AWS_LAMBDA_TIMEOUT }}
         env:
