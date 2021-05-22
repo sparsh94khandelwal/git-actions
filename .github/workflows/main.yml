@@ -15,12 +15,8 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: "@sparsh94khandelwal"
-      - name: "Automated Version Bump"
-        uses: "phips28/gh-action-bump-version@master"
-        with:
-          tag-prefix: ""
       - run: |
-          npm i
-          npm publish
+          echo ${{AWS_LAMBDA_TIMEOUT}}
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          AWS_LAMBDA_TIMEOUT: ${{process.env.AWS_LAMBDA_TIMEOUT}}

@@ -19,5 +19,7 @@
     "url": "https://github.com/sparsh94khandelwal/git-actions/issues"
   },
   "homepage": "https://github.com/sparsh94khandelwal/git-actions#readme",
-  "dependencies": {}
+  "dependencies": {
+    "@skupreme/skupreme-db-utilities": "^1.0.0"
+  }
 }
