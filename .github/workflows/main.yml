@@ -9,9 +9,9 @@ jobs:
   publish-gpr:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - id: dotenv
-        uses: ./../.github/actions/dotenv-action
+      - uses: actions/checkout@v2
+      - name: Dotenv Action
+        uses: falti/dotenv-action@v0.2.5
       - run: |
           echo ${{ steps.dotenv.outputs.AWS_LAMBDA_TIMEOUT }}
         env:
